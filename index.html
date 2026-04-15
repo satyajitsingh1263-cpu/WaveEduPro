@@ -1,0 +1,403 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>WaveEduPro | Physics Study Material — Class 10, 11, 12, JEE, NEET PYQs</title>
+  <meta name="description" content="WaveEduPro: Class 10th, 11th, 12th Physics notes & questions. JEE Mains PYQ, JEE Advanced PYQ, NEET PYQ. Complete study repository.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #fafcff;
+      color: #0a0c12;
+      line-height: 1.5;
+    }
+
+    /* navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+      z-index: 100;
+      padding: 0.9rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f4c81, #3b82f6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo i { background: none; color: #2563eb; margin-right: 6px; }
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1e293b;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+    .nav-links a:hover { color: #2563eb; }
+    .btn-access {
+      background: #2563eb;
+      color: white;
+      padding: 0.4rem 1.3rem;
+      border-radius: 40px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-access:hover { background: #1d4ed8; }
+
+    /* hero */
+    .hero {
+      background: linear-gradient(115deg, #eef2ff 0%, #dfe9f5 100%);
+      padding: 2.2rem 2rem 2.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0.8rem auto;
+      color: #1e293b;
+    }
+    .quick-stats {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+    }
+    .stat-chip {
+      background: white;
+      border-radius: 40px;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1e40af;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    /* container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem 1.8rem;
+    }
+
+    /* section styles */
+    .class-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 80px;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 3px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title i {
+      font-size: 1.8rem;
+      color: #2563eb;
+    }
+    .badge-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .badge-light {
+      background: #eef2ff;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    /* material grid */
+    .material-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.3rem 1.4rem;
+      border: 1px solid #eef2ff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+      transition: 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px -12px rgba(0,0,0,0.1);
+      border-color: #bfdbfe;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+    .card-icon {
+      font-size: 1.6rem;
+    }
+    .topic-tag {
+      background: #e0f2fe;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #0369a1;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .card-desc {
+      font-size: 0.8rem;
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+    .links-row {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .material-link {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #1e293b;
+      transition: 0.2s;
+    }
+    .material-link i { margin-right: 5px; font-size: 0.7rem; }
+    .material-link:hover { background: #2563eb; color: white; border-color: #2563eb; }
+
+    /* pyq special styling */
+    .pyq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.3rem;
+    }
+    .pyq-card {
+      background: #fefce8;
+      border-left: 5px solid #f59e0b;
+      border-radius: 1rem;
+      padding: 1rem 1.2rem;
+    }
+    .pyq-title {
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; text-align: center; }
+      .section-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><i class="fas fa-waveform"></i> WaveEduPro</div>
+  <div class="nav-links">
+    <a href="#class10">Class 10</a>
+    <a href="#class11">Class 11</a>
+    <a href="#class12">Class 12</a>
+    <a href="#jeemains">JEE Mains PYQ</a>
+    <a href="#jeeadv">JEE Adv PYQ</a>
+    <a href="#neet">NEET PYQ</a>
+  </div>
+  <div>
+    <button class="btn-access" id="libraryBtn"><i class="fas fa-folder-tree"></i> Full Library</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>📚 WaveEduPro — Physics Repository</h1>
+  <p>Classwise notes + questions + previous year solved papers (JEE Mains, JEE Advanced, NEET). One hub for all your physics preparation.</p>
+  <div class="quick-stats">
+    <span class="stat-chip"><i class="fas fa-book"></i> 10th · 11th · 12th Notes</span>
+    <span class="stat-chip"><i class="fas fa-file-alt"></i> Chapterwise Questions</span>
+    <span class="stat-chip"><i class="fas fa-chart-line"></i> PYQ Bank: 10+ Years</span>
+  </div>
+</section>
+
+<div class="container">
+  
+  <!-- ================= CLASS 10 SECTION ================= -->
+  <section id="class10" class="class-section">
+    <div class="section-header">
+      <div class="section-title"><i class="fas fa-graduation-cap"></i> Class 10th Physics</div>
+      <div class="badge-group"><span class="badge-light">Notes + Numericals</span><span class="badge-light">Board Pattern</span></div>
+    </div>
+    <div class="material-grid">
+      <div class="card"><div class="card-header"><span class="card-icon">🔦</span><span class="topic-tag">Light - Reflection & Refraction</span></div><div class="card-title">Ray Optics | Spherical Mirrors & Lenses</div><div class="card-desc">Sign convention, mirror formula, lens formula, power of lens, refraction through glass slab.</div><div class="links-row"><a href="#" class="material-link"><i class="fas fa-download"></i> Notes PDF</a><a href="#" class="material-link"><i class="fas fa-question-circle"></i> Topicwise Qs</a><a href="#" class="material-link"><i class="fas fa-chalkboard"></i> Solved Numericals</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">⚡</span><span class="topic-tag">Electricity</span></div><div class="card-title">Current, Ohm's Law, Resistance & Circuits</div><div class="card-desc">Series/Parallel, heating effect, electric power, numericals on resistivity & combination.</div><div class="links-row"><a href="#" class="material-link"><i class="fas fa-download"></i> Handwritten Notes</a><a href="#" class="material-link"><i class="fas fa-tasks"></i> Practice Sheet</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">🧲</span><span class="topic-tag">Magnetic Effects</span></div><div class="card-title">Magnetic Field, DC Motor, Electromagnetic Induction</div><div class="card-desc">Right-hand rule, solenoid, domestic circuits, AC/DC basics.</div><div class="links-row"><a href="#" class="material-link"><i class="fas fa-download"></i> Notes + Diagrams</a><a href="#" class="material-link"><i class="fas fa-question"></i> Important Questions</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">☀️</span><span class="topic-tag">Human Eye & Colourful World</span></div><div class="card-title">Defects of Vision, Dispersion, Scattering</div><div class="card-desc">Myopia, hypermetropia, prism, Tyndall effect, rainbow formation.</div><div class="links-row"><a href="#" class="material-link"><i class="fas fa-download"></i> Complete Notes</a><a href="#" class="material-link"><i class="fas fa-file-alt"></i> NCERT Solutions</a></div></div>
+    </div>
+  </section>
+
+  <!-- ================= CLASS 11 SECTION ================= -->
+  <section id="class11" class="class-section">
+    <div class="section-header">
+      <div class="section-title"><i class="fas fa-flask"></i> Class 11th Physics</div>
+      <div class="badge-group"><span class="badge-light">Mechanics · Waves · Thermodynamics</span></div>
+    </div>
+    <div class="material-grid">
+      <div class="card"><div class="card-header"><span class="card-icon">📐</span><span class="topic-tag">Kinematics & Vectors</span></div><div class="card-title">Motion in 1D/2D, Projectile, Relative Motion</div><div class="card-desc">Graphs, equations of motion, vector addition, river-boat problems.</div><div class="links-row"><a href="#" class="material-link">Notes PDF</a><a href="#" class="material-link">DPP + Solutions</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">⚙️</span><span class="topic-tag">NLM, Friction & Circular Motion</span></div><div class="card-title">Newton's Laws, Constraint, Banking of Roads</div><div class="card-desc">Free body diagrams, static/kinetic friction, centripetal force.</div><div class="links-row"><a href="#" class="material-link">Theory Booklet</a><a href="#" class="material-link">Numerical Sets</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">🌀</span><span class="topic-tag">Work, Energy & Power</span></div><div class="card-title">Work-Energy Theorem, Potential Energy, Collisions</div><div class="card-desc">Elastic/inelastic collisions, spring potential, power.</div><div class="links-row"><a href="#" class="material-link">Formula Sheet</a><a href="#" class="material-link">PYQs (Class 11)</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">🌊</span><span class="topic-tag">Oscillations & Waves (SHM)</span></div><div class="card-title">Simple Harmonic Motion, Beats, Standing Waves</div><div class="card-desc">Spring-block, pendulum, Doppler effect, organ pipes.</div><div class="links-row"><a href="#" class="material-link">Notes + Mindmaps</a><a href="#" class="material-link">Practice Questions</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">🔥</span><span class="topic-tag">Thermodynamics & KTG</span></div><div class="card-title">Laws of Thermodynamics, Carnot Engine, Gas Laws</div><div class="card-desc">Ideal gas, specific heats, entropy basics for class 11.</div><div class="links-row"><a href="#" class="material-link">Chapter Notes</a><a href="#" class="material-link">Numerical Problems</a></div></div>
+    </div>
+  </section>
+
+  <!-- ================= CLASS 12 SECTION ================= -->
+  <section id="class12" class="class-section">
+    <div class="section-header">
+      <div class="section-title"><i class="fas fa-atom"></i> Class 12th Physics</div>
+      <div class="badge-group"><span class="badge-light">Electrostatics · Magnetism · EMI · Modern</span></div>
+    </div>
+    <div class="material-grid">
+      <div class="card"><div class="card-header"><span class="card-icon">🔋</span><span class="topic-tag">Electrostatics</span></div><div class="card-title">Coulomb's Law, Gauss Theorem, Capacitors</div><div class="card-desc">Electric field, potential, dielectrics, energy stored.</div><div class="links-row"><a href="#" class="material-link">Complete Notes</a><a href="#" class="material-link">Important Questions</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">🧲</span><span class="topic-tag">Magnetism & Matter</span></div><div class="card-title">Biot-Savart, Ampere's Law, Torque on Loop</div><div class="card-desc">Magnetic field, solenoid, cyclotron, magnetic materials.</div><div class="links-row"><a href="#" class="material-link">PDF Notes</a><a href="#" class="material-link">PYQ Bank</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">⚡🔄</span><span class="topic-tag">EMI & AC</span></div><div class="card-title">Electromagnetic Induction, Alternating Current</div><div class="card-desc">Faraday's law, Lenz law, transformers, LC oscillations.</div><div class="links-row"><a href="#" class="material-link">Formula Booklet</a><a href="#" class="material-link">Solved Numericals</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">💡</span><span class="topic-tag">Wave & Ray Optics</span></div><div class="card-title">Interference, Diffraction, Polarization, Lenses</div><div class="card-desc">YDSE, single slit, optical instruments, microscope.</div><div class="links-row"><a href="#" class="material-link">Notes + Diagrams</a><a href="#" class="material-link">Numerical Problems</a></div></div>
+      <div class="card"><div class="card-header"><span class="card-icon">⚛️</span><span class="topic-tag">Modern Physics</span></div><div class="card-title">Dual Nature, Atoms, Nuclei, Semiconductors</div><div class="card-desc">Photoelectric effect, Bohr model, radioactivity, logic gates.</div><div class="links-row"><a href="#" class="material-link">Modern Physics Notes</a><a href="#" class="material-link">PYQs (CBSE/Boards)</a></div></div>
+    </div>
+  </section>
+
+  <!-- ================= JEE MAINS PYQ ================= -->
+  <section id="jeemains" class="class-section">
+    <div class="section-header">
+      <div class="section-title"><i class="fas fa-chart-line"></i> JEE Mains PYQ (Physics)</div>
+      <div class="badge-group"><span class="badge-light">2019–2024 · Chapterwise</span></div>
+    </div>
+    <div class="pyq-grid">
+      <div class="pyq-card"><div class="pyq-title">📁 JEE Mains: Mechanics PYQ</div><p style="font-size: 0.8rem;">Kinematics, NLM, rotational, gravitation — solved with video hints.</p><div class="links-row" style="margin-top: 8px;"><a href="#" class="material-link">Download PDF</a><a href="#" class="material-link">Solutions</a></div></div>
+      <div class="pyq-card"><div class="pyq-title">⚡ Electrostatics & Magnetism</div><p style="font-size: 0.8rem;">Electric fields, capacitance, magnetic effects, EMI (Mains level).</p><div class="links-row"><a href="#" class="material-link">PYQ Compilation</a><a href="#" class="material-link">Answer Key</a></div></div>
+      <div class="pyq-card"><div class="pyq-title">🔥 Thermodynamics & Waves</div><p style="font-size: 0.8rem;">KTG, calorimetry, SHM, Doppler effect — Mains pattern.</p><div class="links-row"><a href="#" class="material-link">Yearwise PDF</a><a href="#" class="material-link">Topicwise Segregation</a></div></div>
+      <div class="pyq-card"><div class="pyq-title">💡 Optics & Modern Physics</div><p style="font-size: 0.8rem;">Ray optics, wave optics, dual nature, atoms, nuclei (Mains).</p><div class="links-row"><a href="#" class="material-link">Solved PYQs</a><a href="#" class="material-link">Quick Revision Notes</a></div></div>
+    </div>
+  </section>
+
+  <!-- ================= JEE ADVANCED PYQ ================= -->
+  <section id="jeeadv" class="class-section">
+    <div class="section-header">
+      <div class="section-title"><i class="fas fa-trophy"></i> JEE Advanced PYQ (Physics)</div>
+      <div class="badge-group"><span class="badge-light">2015–2024 · High Difficulty</span></div>
+    </div>
+    <div class="pyq-grid">
+      <div class="pyq-card" style="background: #f1f5f9; border-left-color: #dc2626;"><div class="pyq-title">🎯 Mechanics (JEE Adv)</div><p>Rotational motion, SHM, complex collision, centre of mass — advanced problems.</p><div class="links-row"><a href="#" class="material-link">Adv PYQ Booklet</a><a href="#" class="material-link">Video Solutions</a></div></div>
+      <div class="pyq-card" style="background: #f1f5f9; border-left-color: #dc2626;"><div class="pyq-title">🧲 Electrodynamics Adv Level</div><p>Capacitor networks, Biot-Savart, EMI with calculus, AC circuits.</p><div class="links-row"><a href="#" class="material-link">Full Solutions PDF</a><a href="#" class="material-link">Topicwise Analysis</a></div></div>
+      <div class="pyq-card" style="background: #f1f5f9; border-left-color: #dc2626;"><div class="pyq-title">🌊 Waves, Thermodynamics & Optics</div><p>Standing waves, heat transfer, diffraction & modern physics (Adv).</p><div class="links-row"><a href="#" class="material-link">Download PYQ Set</a><a href="#" class="material-link">Detailed Solutions</a></div></div>
+    </div>
+  </section>
+
+  <!-- ================= NEET PYQ ================= -->
+  <section id="neet" class="class-section">
+    <div class="section-header">
+      <div class="section-title"><i class="fas fa-heartbeat"></i> NEET PYQ (Physics)</div>
+      <div class="badge-group"><span class="badge-light">NEET 2018-2024 · NCERT based</span></div>
+    </div>
+    <div class="pyq-grid">
+      <div class="pyq-card" style="background: #ecfdf5; border-left-color: #10b981;"><div class="pyq-title">📘 Class 11 Topics (NEET PYQ)</div><p>Kinematics, Laws of motion, Work power energy, Gravitation, Waves.</p><div class="links-row"><a href="#" class="material-link">Chapterwise NEET PYQ</a><a href="#" class="material-link">Solutions with Explanations</a></div></div>
+      <div class="pyq-card" style="background: #ecfdf5; border-left-color: #10b981;"><div class="pyq-title">⚡ Class 12 Topics (NEET PYQ)</div><p>Electrostatics, Current electricity, Magnetism, EMI, Optics, Modern.</p><div class="links-row"><a href="#" class="material-link">Compiled PDF</a><a href="#" class="material-link">Answer Keys</a></div></div>
+      <div class="pyq-card" style="background: #ecfdf5; border-left-color: #10b981;"><div class="pyq-title">📅 NEET Full Mock Papers (Physics)</div><p>Previous year entire physics section with time bound practice.</p><div class="links-row"><a href="#" class="material-link">Download 10+ Papers</a><a href="#" class="material-link">Video Discussion</a></div></div>
+    </div>
+  </section>
+
+  <!-- extra resource banner -->
+  <div style="background: linear-gradient(110deg,#e6f0ff, #ffffff); border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem; text-align: center; border: 1px solid #cbd5e1;">
+    <h3><i class="fas fa-database"></i> Complete Question Bank + Formula Revision</h3>
+    <p>Access chapterwise question banks, revision checklists, and last-minute formula sheets for Class 10,11,12, JEE & NEET.</p>
+    <div class="links-row" style="justify-content: center; margin-top: 10px;">
+      <a href="#" class="material-link" style="background:#2563eb; color:white;">📖 Formula Masterbook</a>
+      <a href="#" class="material-link">📋 Topicwise Question Bank</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p><strong>WaveEduPro — Physics Hub</strong> | Class 10th · 11th · 12th Notes + Questions | JEE Mains PYQ | JEE Advanced PYQ | NEET PYQ</p>
+  <p style="margin-top: 0.5rem;">📌 All resources are downloadable & regularly updated for latest exam patterns.</p>
+</div>
+
+<script>
+  document.getElementById('libraryBtn')?.addEventListener('click', () => {
+    alert("📚 WaveEduPro Library: Access notes, chapterwise questions, and previous year solved papers for Class 10,11,12, JEE Mains, JEE Adv, NEET. (Full access after signup)");
+  });
+  const allLinks = document.querySelectorAll('.material-link');
+  allLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert("📘 WaveEduPro: This study material / PYQ set is ready for preview. (Demo version — login to download full PDF)");
+    });
+  });
+  // smooth scroll
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
